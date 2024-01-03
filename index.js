@@ -14,7 +14,7 @@ app.post("/addNotes", async (req, res) => {
     if (!title || !content) {
       return res
         .status(400)
-        .send({ status: 400, message: "Please enter title and content" });
+        .send({ status: 400, message: "Please enter title and content " });
     }
     const contentDocument = await contentCollection({
       id: uuidv4(),
@@ -29,7 +29,7 @@ app.post("/addNotes", async (req, res) => {
   } catch (err) {
     return res
       .status(500)
-      .send({ status: 500, message: "Internal Server Error" });
+      .send({ status: 500, message: "Internal server error" });
   }
 });
 
